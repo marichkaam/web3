@@ -1,0 +1,28 @@
+extends ../../layout
+
+block content
+  h3 Project List
+
+  a(href='/project/add' class="btn btn-default") Add
+
+  table(class="table")
+    thead
+      tr
+        th Id
+        th Name
+        th CustomerId
+        th MinExp
+        th Delete
+        th Update
+
+    tbody
+      each project in projects
+        tr
+          td #{project.id}
+          td #{project.name}
+          td #{project.customerId}
+          td #{project.minExp}
+          td 
+            a(class="btn_delete btn-warning" href=`/project/remove/${project.id}`) delete
+          td 
+            a(class="btn_update btn-primary" href=`/project/edit/${project.id}`) update

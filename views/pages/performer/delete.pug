@@ -1,0 +1,14 @@
+extends ../../layout
+
+block content
+  div(class='col-md-6')
+    form(id='performer-add-form' name='performer-delete-form' class='form-horizontal' method="POST" action='')
+      input(id='id' type="hidden" name='id' value=performer.id class='form-control')
+      div(class='form-group')
+        div(class='col-md-12') id - #{performer.id}
+        div(class='col-md-12') name - #{performer.name}
+        div(class='col-md-12') experience - #{performer.experience}
+        div(class='col-md-12') workers - #{performer.workers}
+      div(class='form-group')
+        div(class='col-md-12')
+          button(type='submit' class='btn btn-primary') Delete

@@ -1,0 +1,26 @@
+extends ../../layout
+
+block content
+  h3 Customer List
+
+  a(href='/customer/add' class="btn btn-default") Add
+
+  table(class="table")
+    thead
+      tr
+        th Id
+        th Name
+        th Budget
+        th Delete
+        th Update
+
+    tbody
+      each customer in customers
+        tr
+          td #{customer.id}
+          td #{customer.name}
+          td #{customer.budget}
+          td 
+            a(class="btn_delete btn-warning" href=`/customer/remove/${customer.id}`) delete
+          td 
+            a(class="btn_update btn-primary" href=`/customer/edit/${customer.id}`) update

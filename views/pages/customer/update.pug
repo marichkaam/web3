@@ -1,0 +1,20 @@
+extends ../../layout
+
+block content
+  div(class='col-md-6')
+    form(id='customer-update-form' name='customer-update-form' class='form-horizontal' method="POST" action='')
+      input(id='id' name='id' type='hidden')
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='name') Name
+        div(class='col-md-9')
+          input(id='name' name='name' class='form-control' value=`${customer.name}`)
+
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='budget') Budget
+        div(class='col-md-9')
+          input(id='budget' name='budget' class='form-control' value=`${customer.budget}`)
+      div(class='form-group')
+        div(class='col-md-12')
+          button(type='submit' class='btn btn-primary') Update

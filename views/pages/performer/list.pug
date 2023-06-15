@@ -1,0 +1,28 @@
+extends ../../layout
+
+block content
+  h3 Performer List
+
+  a(href='/performer/add' class="btn btn-default") Add
+
+  table(class="table")
+    thead
+      tr
+        th Id
+        th Name
+        th Experience
+        th Workers
+        th Delete
+        th Update
+
+    tbody
+      each performer in performers
+        tr
+          td #{performer.id}
+          td #{performer.name}
+          td #{performer.experience}
+          td #{performer.workers}
+          td 
+            a(class="btn_delete btn-warning" href=`/performer/remove/${performer.id}`) delete
+          td 
+            a(class="btn_update btn-primary" href=`/performer/edit/${performer.id}`) update

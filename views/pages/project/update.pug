@@ -1,0 +1,24 @@
+extends ../../layout
+
+block content
+  div(class='col-md-6')
+    form(id='project-update-form' name='project-update-form' class='form-horizontal' method="POST" action='')
+      input(id='id' name='id' type='hidden')
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='name') Name
+        div(class='col-md-9')
+          input(id='name' name='name' class='form-control' value=`${project.name}`)
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='sku') CustomerId
+        div(class='col-md-9')
+          input(id='customerId' name='customerId' class='form-control' value=`${project.customerId}`)
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='capacity') Capacity
+        div(class='col-md-9')
+          input(id='minExp' name='minExp' class='form-control' value=`${project.minExp}`)
+      div(class='form-group')
+        div(class='col-md-12')
+          button(type='submit' class='btn btn-primary') Update

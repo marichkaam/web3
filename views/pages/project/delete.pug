@@ -1,0 +1,14 @@
+extends ../../layout
+
+block content
+  div(class='col-md-6')
+    form(id='project-add-form' name='project-delete-form' class='form-horizontal' method="POST" action='')
+      input(id='id' type="hidden" name='id' value=project.id class='form-control')
+      div(class='form-group')
+        div(class='col-md-12') id - #{project.id}
+        div(class='col-md-12') name - #{project.name}
+        div(class='col-md-12') customerId - #{project.customerId}
+        div(class='col-md-12') minExp - #{project.minExp}
+      div(class='form-group')
+        div(class='col-md-12')
+          button(type='submit' class='btn btn-primary') Delete

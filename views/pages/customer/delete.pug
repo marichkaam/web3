@@ -1,0 +1,13 @@
+extends ../../layout
+
+block content
+  div(class='col-md-6')
+    form(id='customer-add-form' name='customer-delete-form' class='form-horizontal' method="POST" action='')
+      input(id='id' type="hidden" name='id' value=customer.id class='form-control')
+      div(class='form-group')
+        div(class='col-md-12') id - #{customer.id}
+        div(class='col-md-12') name - #{customer.name}
+        div(class='col-md-12') budget - #{customer.budget}
+      div(class='form-group')
+        div(class='col-md-12')
+          button(type='submit' class='btn btn-primary') Delete

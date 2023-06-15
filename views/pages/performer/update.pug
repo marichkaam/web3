@@ -1,0 +1,24 @@
+extends ../../layout
+
+block content
+  div(class='col-md-6')
+    form(id='performer-update-form' name='performer-update-form' class='form-horizontal' method="POST" action='')
+      input(id='id' name='id' type='hidden')
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='name') Name
+        div(class='col-md-9')
+          input(id='name' name='name' class='form-control' value=`${performer.name}`)
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='sku') Experience
+        div(class='col-md-9')
+          input(id='experience' name='experience' class='form-control' value=`${performer.experience}`)
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='workers') Workers
+        div(class='col-md-9')
+          input(id='workers' name='workers' class='form-control' value=`${performer.workers}`)
+      div(class='form-group')
+        div(class='col-md-12')
+          button(type='submit' class='btn btn-primary') Update
